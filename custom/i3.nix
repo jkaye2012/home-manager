@@ -17,6 +17,7 @@ in {
 
         startup = [
           { command = "xmodmap ~/.xmodmap"; always = true; notification = false; }
+          { command = "${pkgs.networkmanagerapplet}/bin/nm-applet"; always = true; notification = false; }
         ];
 
         keybindings = lib.mkOptionDefault {
@@ -41,6 +42,7 @@ in {
           {
             position = "top";
             statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
+            trayOutput = "primary";
           }
         ];
       };
