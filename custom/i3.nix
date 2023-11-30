@@ -37,12 +37,12 @@ in {
           "${mod}+Shift+semicolon" = "move right";
         };
 
-        # bars = [
-        #   {
-        #     position = "bottom";
-        #     statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
-        #   }
-        # ];
+        bars = [
+          {
+            position = "top";
+            statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
+          }
+        ];
       };
     };
   };
