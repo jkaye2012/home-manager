@@ -21,9 +21,12 @@
   # environment.
   home.packages = with pkgs; [
     font-awesome
+    mate.mate-power-manager
+    nodejs_21
     powerline-fonts
     powerline-symbols
     ripgrep
+    rofi
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -50,6 +53,7 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
     ".xmodmap".source = ./files/xmodmap;
+    ".config/rofi/config.rasi".source = ./files/rofi/config.rasi;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
