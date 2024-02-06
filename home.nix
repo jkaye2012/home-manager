@@ -17,16 +17,22 @@
 
   fonts.fontconfig.enable = true;
 
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     font-awesome
     mate.mate-power-manager
+    microsoft-edge
     nodejs_21
     powerline-fonts
     powerline-symbols
     ripgrep
     rofi
+    ungoogled-chromium
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

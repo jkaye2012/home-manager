@@ -20,6 +20,7 @@ in {
 
         startup = [
           { command = "xmodmap ~/.xmodmap"; always = true; notification = false; }
+          { command = "exec --no-startup-id /usr/bin/setxkbmap -option 'ctrl:swapcaps'"; always = true; notification = false; }
           { command = "${pkgs.networkmanagerapplet}/bin/nm-applet"; always = true; notification = false; }
           { command = "${pkgs.xfce.xfce4-clipman-plugin}/bin/xfce4-clipman"; always = true; notification = false; }
           { command = "${pkgs.mate.mate-power-manager}/bin/mate-power-manager"; always = true; notification = false; }
